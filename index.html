@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Redirect</title>
+  <script>
+    window.onload = function () {
+      const formA = "https://forms.gle/SoYqS38RLzVvFrCA7";
+      const formB = "https://forms.gle/iiUTWbz2JABspwFg7";
+      const randomPick = Math.random() < 0.5 ? formA : formB;
+      window.location.href = randomPick;
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you to the survey...</p>
+</body>
+</html>
