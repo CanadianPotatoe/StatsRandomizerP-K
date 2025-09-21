@@ -7,8 +7,18 @@
     window.onload = function () {
       const formA = "https://forms.gle/SoYqS38RLzVvFrCA7";
       const formB = "https://forms.gle/iiUTWbz2JABspwFg7";
-      const randomPick = Math.random() < 0.5 ? formA : formB;
-      window.location.href = randomPick;
+
+      // Check if user already has an assigned form
+      let assignedForm = localStorage.getItem("assignedForm");
+
+      if (!assignedForm) {
+        // Randomly assign form if none stored
+        assignedForm = Math.random() < 0.5 ? formA : formB;
+        localStorage.setItem("assignedForm", assignedForm);
+      }
+
+      // Redirect to assigned form
+      window.location.href = assignedForm;
     };
   </script>
 </head>
