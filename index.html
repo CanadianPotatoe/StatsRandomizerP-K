@@ -15,6 +15,9 @@
         // Randomly assign form if none stored
         assignedForm = Math.random() < 0.5 ? formA : formB;
         localStorage.setItem("assignedForm", assignedForm);
+        // window.location.href = assignedForm; // comment out for testing
+        console.log("Assigned form:", assignedForm);
+
       }
 
       // Redirect to assigned form
@@ -24,5 +27,6 @@
 </head>
 <body>
   <p>Redirecting you to the survey...</p>
+  
 </body>
 </html>
